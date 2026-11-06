@@ -60,3 +60,16 @@ const PRO_DIAGNOSTICS = {
   }
 };
 
+const PRO_P0302 = {
+  issue: "Cylinder 2 misfire",
+  checks: [
+    "Inspect cylinder 2 spark plug.",
+    "Test cylinder 2 ignition coil with an approved tester.",
+    "Check cylinder 2 fuel injector operation.",
+    "Inspect wiring and connectors.",
+    "Verify engine compression if necessary."
+  ]
+};
+
+PRO_DIAGNOSTICS.P0302 = PRO_P0302;
+
