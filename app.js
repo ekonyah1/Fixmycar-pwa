@@ -73,3 +73,22 @@ const PRO_P0302 = {
 
 PRO_DIAGNOSTICS.P0302 = PRO_P0302;
 
+function showProDiagnostics(code) {
+  const guide = PRO_DIAGNOSTICS[code.toUpperCase()];
+  if (!guide) {
+    return "No advanced diagnostic guide available.";
+  }
+
+  return `
+    <div class="panel">
+      <h3>Advanced Diagnostics: ${clean(code)}</h3>
+      <p>${clean(guide.issue)}</p>
+      <ol>
+        ${guide.checks.map(check =>
+          `<li>${clean(check)}</li>`
+        ).join('')}
+      </ol>
+    </div>
+  `;
+}
+
