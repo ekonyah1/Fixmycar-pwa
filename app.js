@@ -37,3 +37,26 @@ const PRO_FEATURES = {
   priorityTroubleshooting: true
 };
 
+const PRO_DIAGNOSTICS = {
+  P0300: {
+    issue: "Random or multiple cylinder misfire",
+    checks: [
+      "Read all stored trouble codes.",
+      "Inspect spark plugs and ignition coils.",
+      "Check for intake air leaks.",
+      "Verify fuel delivery.",
+      "Check engine compression if needed."
+    ]
+  },
+  P0301: {
+    issue: "Cylinder 1 misfire",
+    checks: [
+      "Inspect cylinder 1 spark plug.",
+      "Test cylinder 1 ignition coil.",
+      "Check injector operation.",
+      "Inspect wiring and connectors.",
+      "Verify compression if necessary."
+    ]
+  }
+};
+
