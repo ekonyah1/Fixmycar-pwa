@@ -28,7 +28,7 @@ function getProGuide(code) {
   return showProDiagnostics(code);
 }
 function renderCodes(){const q=$('codeSearch').value.trim().toLowerCase();$('codeResults').innerHTML=codes.filter(c=>c.join(' ').toLowerCase().includes(q)).map(c=>`<div class="record"><b style="color:var(--gold)">${clean(c[0])}</b><p>${clean(c[1])}</p><small>Possible areas to check: ${clean(c[2])}. Confirm with vehicle-specific service data.</small>${getProGuide(c[0])}</div>`).join('')||'<p>No matching code in this starter library.</p>'}
-$('codeSearch').addEventListener('input',renderCodes);renderCodes();
+$('codeSearch').addEventListener('input',renderCodes);
 $('export').onclick=()=>{const blob=new Blob([JSON.stringify({format:'fixmycar-v1',data:db},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='fixmycar-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 $('import').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const parsed=JSON.parse(await file.text());if(parsed.format!=='fixmycar-v1'||!Array.isArray(parsed.data?.vehicles)||!Array.isArray(parsed.data?.cases))throw Error('Not a FixMyCar backup');if(!confirm('Replace all current vehicle and case records with this backup?'))return;db=parsed.data;save();render();alert('Backup imported.')}catch(err){alert('Import failed: '+err.message)}e.target.value=''});
 render();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
@@ -95,3 +95,4 @@ function showProDiagnostics(code) {
   `;
 }
 
+renderCodes();
