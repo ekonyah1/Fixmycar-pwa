@@ -24,8 +24,31 @@ codes.push(
   ['P0340','Camshaft position sensor A circuit (Bank 1 or single sensor)','Sensor, wiring or timing-related issues']
 );
 
+codes.push(
+  ['P0100','Mass or volume airflow circuit malfunction','MAF sensor, intake leaks or wiring'],
+  ['P0101','Mass or volume airflow circuit range/performance','MAF sensor, intake restrictions or air leaks'],
+  ['P0102','Mass or volume airflow circuit low input','MAF sensor, wiring or connector'],
+  ['P0103','Mass or volume airflow circuit high input','MAF sensor, wiring or connector'],
+  ['P0110','Intake air temperature sensor circuit malfunction','IAT sensor, connector or wiring'],
+  ['P0113','Intake air temperature sensor circuit high input','IAT sensor, open circuit or wiring'],
+  ['P0120','Throttle position sensor circuit malfunction','Throttle sensor, connector or wiring'],
+  ['P0121','Throttle position sensor range/performance','Throttle sensor, throttle body or wiring'],
+  ['P0130','Oxygen sensor circuit malfunction (Bank 1 Sensor 1)','Oxygen sensor, wiring or exhaust leaks'],
+  ['P0133','Oxygen sensor slow response (Bank 1 Sensor 1)','Oxygen sensor, exhaust leaks or fuel control'],
+  ['P0141','Oxygen sensor heater circuit malfunction (Bank 1 Sensor 2)','Sensor heater, fuse or wiring'],
+  ['P0170','Fuel trim malfunction (Bank 1)','Fuel delivery, intake leaks or sensor readi9ngs'],
+  ['P0200','Fuel injector circuit malfunction','Injector wiring, connectors or control circuit'],
+  ['P0303','Cylinder 3 misfire detected','Spark plug, ignition coil, injector or compression'],
+  ['P0304','Cylinder 4 misfire detected','Spark plug, ignition coil, injector or compression'],
+  ['P0325','Knock sensor circuit malfunction (Bank 1)','Knock sensor, wiring or connector'],
+  ['P0401','Exhaust gas recirculation flow insufficient','EGR passages, valve or control system'],
+  ['P0440','Evaporative emission control system malfunction','EVAP hoses, fuel cap or valves'],
+  ['P0455','EVAP system large leak detected','Fuel cap, EVAP hoses or purge/vent valves'],
+  ['P0500','Vehicle speed sensor malfunction','Speed sensor, wiring or signal circuit']
+);
+
 let session=null;
-function go(page){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===page));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('selected',x.dataset.go===page));window.scrollTo(0,0);render()}
+function go(page) {document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===page));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('selected',x.dataset.go===page));window.scrollTo(0,0);render()}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
 function render(){const active=db.vehicles.find(v=>v.id===db.active);$('activeVehicle').textContent=active?`${active.year} ${active.make} ${active.model}${active.engine?' · '+active.engine:''}`:'No vehicle selected. Add one in Garage.';$('vehicleCount').textContent=db.vehicles.length;$('caseCount').textContent=db.cases.length;renderVehicles();renderCases()}
 $('vehicleForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target),v={id:crypto.randomUUID(),year:String(f.get('year')),make:String(f.get('make')).trim(),model:String(f.get('model')).trim(),engine:String(f.get('engine')).trim()};if(!v.make||!v.model)return;db.vehicles.push(v);db.active=v.id;save();e.target.reset();render()});
