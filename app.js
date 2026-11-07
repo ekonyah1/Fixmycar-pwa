@@ -10,6 +10,20 @@ stall:[['When does it stall?','Record whether it stalls at idle, on acceleration
 overheat:[['Stop safely','Switch off engine if temperature is dangerously high; let it cool.','Never open a hot radiator or coolant cap.'],['Visible leaks','When cold, look for coolant loss and damaged hoses.','Coolant is toxic; avoid contact.'],['Cooling operation','Document fan operation and any fault codes using safe procedures.','Fans may start unexpectedly even with engine off.']],
 misfire:[['Describe conditions','Record when roughness occurs: idle, acceleration, cold or hot.','Avoid running an engine with severe misfire.'],['Code scan','Record P0300-series and other codes from a real scanner.','A cylinder code does not automatically mean a bad coil.'],['Visual checks','Check for loose connectors or intake hoses with engine off.','Keep away from hot and rotating components.']]};
 const codes=[['P0300','Random/multiple cylinder misfire detected','Ignition, fuel, air leaks, mechanical causes'],['P0301','Cylinder 1 misfire detected','Ignition, fuel, compression or wiring'],['P0302','Cylinder 2 misfire detected','Ignition, fuel, compression or wiring'],['P0171','System too lean (Bank 1)','Unmetered air, fuel delivery, sensor issues'],['P0420','Catalyst system efficiency below threshold (Bank 1)','Exhaust leaks, catalyst, oxygen sensor issues'],['P0128','Coolant thermostat below regulating temperature','Thermostat, cooling or sensor issue'],['P0442','Evaporative emission system small leak detected','Cap seal, hoses or EVAP components'],['P0101','Mass or volume air flow circuit range/performance','Airflow sensor, intake or wiring'],['P0335','Crankshaft position sensor A circuit','Sensor circuit, wiring or signal'],['P0562','System voltage low','Battery, charging or connections']];
+
+codes.push(
+  ['P0303','Cylinder 3 misfire detected','Spark plug, ignition coil, injector or compression'],
+  ['P0304','Cylinder 4 misfire detected','Spark plug, ignition coil, injector or compression'],
+  ['P0305','Cylinder 5 misfire detected','Spark plug, ignition coil, injector or compression'],
+  ['P0306','Cylinder 6 misfire detected','Spark plug, ignition coil, injector or compression'],
+  ['P0174','System too lean (Bank 2)','Vacuum leaks, fuel delivery or airflow sensor'],
+  ['P0172','System too rich (Bank 1)','Fuel injectors, fuel pressure or airflow sensor'],
+  ['P0175','System too rich (Bank 2)','Fuel injectors, fuel pressure or airflow sensor'],
+  ['P0130','Oxygen sensor circuit malfunction (Bank 1 Sensor 1)','Oxygen sensor, wiring or exhaust leaks'],
+  ['P0135','Oxygen sensor heater circuit malfunction (Bank 1 Sensor 1)','Heater circuit, fuse, wiring or oxygen sensor'],
+  ['P0340','Camshaft position sensor A circuit (Bank 1 or single sensor)','Sensor, wiring or timing-related issues']
+);
+
 let session=null;
 function go(page){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===page));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('selected',x.dataset.go===page));window.scrollTo(0,0);render()}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
