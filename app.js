@@ -190,4 +190,207 @@ function showProDiagnostics(code) {
   `;
 }
 
+Object.assign(PRO_DIAGNOSTICS, {
+  P0010: {
+    issue: "Camshaft position actuator A control circuit (Bank 1)",
+    checks: [
+      "Read stored and pending codes and freeze-frame data.",
+      "Check engine oil level, condition and correct viscosity.",
+      "Inspect the Bank 1 intake VVT solenoid connector and wiring.",
+      "Test the actuator control circuit using the vehicle wiring diagram.",
+      "Test solenoid operation according to manufacturer specifications."
+    ]
+  },
+  P0011: {
+    issue: "Camshaft timing over-advanced (Bank 1)",
+    checks: [
+      "Check engine oil level, condition and viscosity.",
+      "Inspect the VVT solenoid and oil passages.",
+      "Compare commanded and actual camshaft timing with a scan tool.",
+      "Check oil pressure against manufacturer specifications.",
+      "Inspect mechanical timing if the VVT system tests correctly."
+    ]
+  },
+  P0012: {
+    issue: "Camshaft timing over-retarded (Bank 1)",
+    checks: [
+      "Check oil level, condition and correct viscosity.",
+      "Inspect the intake VVT solenoid and connector.",
+      "Check for restricted oil passages.",
+      "Compare commanded and actual camshaft timing.",
+      "Verify mechanical timing if other tests pass."
+    ]
+  },
+  P0013: {
+    issue: "Camshaft position actuator B control circuit (Bank 1)",
+    checks: [
+      "Inspect the Bank 1 exhaust VVT solenoid connector.",
+      "Check wiring for opens, shorts and corrosion.",
+      "Test solenoid resistance against manufacturer specifications.",
+      "Verify power and control signals using the wiring diagram.",
+      "Check engine oil condition and level."
+    ]
+  },
+  P0014: {
+    issue: "Exhaust camshaft timing over-advanced (Bank 1)",
+    checks: [
+      "Check oil level, condition and viscosity.",
+      "Inspect the exhaust VVT solenoid.",
+      "Compare actual and commanded exhaust camshaft timing.",
+      "Check oil pressure and VVT oil passages.",
+      "Inspect mechanical timing if necessary."
+    ]
+  },
+  P0016: {
+    issue: "Crankshaft/camshaft position correlation (Bank 1 Sensor A)",
+    checks: [
+      "Read all codes and freeze-frame information.",
+      "Check engine oil condition and level.",
+      "Inspect crankshaft and camshaft sensor connectors and wiring.",
+      "Check camshaft/crankshaft synchronization using a compatible scan tool.",
+      "Verify mechanical timing and timing-chain condition according to service information."
+    ]
+  },
+  P0017: {
+    issue: "Crankshaft/camshaft position correlation (Bank 1 Sensor B)",
+    checks: [
+      "Read all related trouble codes.",
+      "Inspect crankshaft and exhaust camshaft sensor wiring.",
+      "Check oil condition and VVT operation.",
+      "Compare crankshaft and camshaft synchronization data.",
+      "Inspect mechanical timing if sensor and VVT tests pass."
+    ]
+  },
+  P0020: {
+    issue: "Camshaft position actuator A control circuit (Bank 2)",
+    checks: [
+      "Confirm which cylinder bank is Bank 2.",
+      "Inspect the Bank 2 intake VVT solenoid connector and wiring.",
+      "Check engine oil condition and level.",
+      "Test solenoid resistance and control circuit to manufacturer specifications.",
+      "Verify VVT operation with a compatible scan tool."
+    ]
+  },
+  P0021: {
+    issue: "Camshaft timing over-advanced (Bank 2)",
+    checks: [
+      "Check engine oil level, viscosity and condition.",
+      "Inspect the Bank 2 intake VVT solenoid.",
+      "Compare commanded and actual camshaft timing.",
+      "Check VVT oil passages and oil pressure.",
+      "Verify mechanical timing if necessary."
+    ]
+  },
+  P0022: {
+    issue: "Camshaft timing over-retarded (Bank 2)",
+    checks: [
+      "Inspect oil level, condition and viscosity.",
+      "Check the Bank 2 intake VVT solenoid and wiring.",
+      "Check for restricted oil passages.",
+      "Compare commanded and actual camshaft timing.",
+      "Inspect timing components if the VVT system tests correctly."
+    ]
+  },
+  P0087: {
+    issue: "Fuel rail/system pressure too low",
+    checks: [
+      "Read freeze-frame data and related fuel-system codes.",
+      "Check fuel level and inspect for external fuel leaks.",
+      "Compare desired and actual fuel pressure using a compatible scan tool.",
+      "Test fuel pressure with approved equipment following service procedures.",
+      "Inspect fuel pump supply, filters, pressure regulator and sensors as applicable."
+    ]
+  },
+  P0090: {
+    issue: "Fuel pressure regulator 1 control circuit",
+    checks: [
+      "Read all related fuel-system codes.",
+      "Inspect regulator connector and wiring for damage.",
+      "Check circuit power, ground and control according to the wiring diagram.",
+      "Test regulator electrical characteristics to manufacturer specifications.",
+      "Verify commanded and actual fuel pressure."
+    ]
+  },
+  P0104: {
+    issue: "Mass or volume airflow circuit intermittent",
+    checks: [
+      "Inspect the MAF sensor connector for loose or corroded terminals.",
+      "Inspect intake ducting for cracks and air leaks.",
+      "Check the air filter and sensor for contamination.",
+      "Monitor airflow readings while checking for intermittent wiring faults.",
+      "Test sensor power, ground and signal using service specifications."
+    ]
+  },
+  P0115: {
+    issue: "Engine coolant temperature sensor circuit",
+    checks: [
+      "Check coolant level when the engine is cold.",
+      "Inspect the coolant temperature sensor connector and wiring.",
+      "Compare sensor reading with ambient temperature on a cold engine.",
+      "Check sensor resistance or voltage according to manufacturer specifications.",
+      "Verify temperature readings as the engine warms up."
+    ]
+  },
+  P0116: {
+    issue: "Engine coolant temperature sensor range/performance",
+    checks: [
+      "Compare cold-engine coolant temperature with ambient temperature.",
+      "Monitor temperature changes during engine warm-up.",
+      "Inspect the thermostat and cooling system operation.",
+      "Check sensor wiring and connector condition.",
+      "Test sensor response using manufacturer specifications."
+    ]
+  },
+  P0117: {
+    issue: "Engine coolant temperature sensor circuit low",
+    checks: [
+      "Inspect the sensor connector for moisture and corrosion.",
+      "Check wiring for shorts according to the vehicle wiring diagram.",
+      "Compare scan-tool coolant temperature with actual engine conditions.",
+      "Test sensor resistance and signal voltage to specifications.",
+      "Repair verified wiring or sensor faults."
+    ]
+  },
+  P0118: {
+    issue: "Engine coolant temperature sensor circuit high",
+    checks: [
+      "Inspect the sensor connector for loose or disconnected terminals.",
+      "Check for open circuits and damaged wiring.",
+      "Compare scan-tool coolant temperature with ambient temperature.",
+      "Test sensor resistance and circuit voltage to specifications.",
+      "Repair verified wiring or sensor faults."
+    ]
+  },
+  P0128: {
+    issue: "Coolant thermostat temperature below regulating temperature",
+    checks: [
+      "Check coolant level when the engine is completely cold.",
+      "Compare coolant temperature with ambient temperature before starting.",
+      "Monitor coolant temperature during warm-up.",
+      "Inspect thermostat operation and cooling fan behavior.",
+      "Verify temperature sensor readings before replacing the thermostat."
+    ]
+  },
+  P0305: {
+    issue: "Cylinder 5 misfire detected",
+    checks: [
+      "Read all misfire and fuel-system codes.",
+      "Inspect cylinder 5 spark plug and ignition components.",
+      "Test ignition coil operation using approved procedures.",
+      "Check cylinder 5 injector operation and wiring.",
+      "Test engine compression if ignition and fuel checks pass."
+    ]
+  },
+  P0306: {
+    issue: "Cylinder 6 misfire detected",
+    checks: [
+      "Read all misfire and fuel-system codes.",
+      "Inspect cylinder 6 spark plug and ignition components.",
+      "Test ignition coil operation using approved procedures.",
+      "Check cylinder 6 injector operation and wiring.",
+      "Test engine compression if ignition and fuel checks pass."
+    ]
+  }
+});
+
 renderCodes();
