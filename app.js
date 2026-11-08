@@ -46,7 +46,18 @@ codes.push(
   ['P0455','EVAP system large leak detected','Fuel cap, EVAP hoses or purge/vent valves'],
   ['P0500','Vehicle speed sensor malfunction','Speed sensor, wiring or signal circuit']
 );
-
+codes.push(
+  ['P0335','Crankshaft position sensor A circuit malfunction','Check crankshaft sensor, wiring and connectors.'],
+  ['P0341','Camshaft position sensor A circuit range/performance','Check camshaft sensor, timing and wiring.'],
+  ['P0420','Catalyst system efficiency below threshold (Bank 1)','Check exhaust leaks, oxygen sensors and catalytic converter.'],
+  ['P0430','Catalyst system efficiency below threshold (Bank 2)','Check exhaust leaks, oxygen sensors and catalytic converter.'],
+  ['P0442','EVAP system small leak detected','Check fuel cap, EVAP hoses and seals.'],
+  ['P0456','EVAP system very small leak detected','Check fuel cap, EVAP hoses and seals.'],
+  ['P0505','Idle control system malfunction','Check idle control system, throttle body and air leaks.'],
+  ['P0562','System voltage low','Check battery, charging system and connections.'],
+  ['P0700','Transmission control system malfunction','Read transmission control module codes.'],
+  ['P0715','Input/turbine speed sensor A circuit malfunction','Check transmission speed sensor, wiring and connectors.']
+);
 let session=null;
 function go(page) {document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===page));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('selected',x.dataset.go===page));window.scrollTo(0,0);render()}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
