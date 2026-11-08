@@ -394,3 +394,89 @@ Object.assign(PRO_DIAGNOSTICS, {
 });
 
 renderCodes();
+
+Object.assign(PRO_DIAGNOSTICS, {
+  P0100: {
+    issue: "Mass or volume air flow circuit malfunction",
+    checks: ["Read stored codes and freeze-frame data.", "Inspect the MAF sensor connector and wiring.", "Check intake ducting for leaks after the sensor.", "Check sensor power, ground and signal against service data.", "Compare airflow readings with expected values."]
+  },
+  P0101: {
+    issue: "Mass or volume air flow circuit range/performance",
+    checks: ["Inspect the air filter and intake ducting.", "Check for intake leaks and restrictions.", "Inspect the MAF sensor for contamination.", "Compare MAF readings at idle and under load.", "Check related fuel-trim and airflow codes."]
+  },
+  P0102: {
+    issue: "Mass or volume air flow circuit low input",
+    checks: ["Inspect MAF wiring and connector.", "Check the sensor supply and ground circuits.", "Inspect for shorted or damaged signal wiring.", "Compare live MAF readings with specifications.", "Test the sensor using manufacturer procedures."]
+  },
+  P0103: {
+    issue: "Mass or volume air flow circuit high input",
+    checks: ["Inspect the MAF connector for damage.", "Check signal wiring for shorts to voltage.", "Verify sensor ground and supply voltage.", "Compare live airflow data with expected readings.", "Test or replace components only after confirming the fault."]
+  },
+  P0110: {
+    issue: "Intake air temperature sensor circuit malfunction",
+    checks: ["Read freeze-frame and related codes.", "Inspect the intake air temperature sensor connector.", "Check wiring for opens or shorts.", "Compare intake temperature with ambient temperature on a cold engine.", "Test sensor resistance or voltage using service specifications."]
+  },
+  P0112: {
+    issue: "Intake air temperature sensor circuit low input",
+    checks: ["Inspect sensor wiring and connector.", "Check for a signal short to ground.", "Compare cold-engine temperature readings with ambient.", "Test sensor resistance against the temperature chart.", "Repair confirmed circuit or sensor faults."]
+  },
+  P0113: {
+    issue: "Intake air temperature sensor circuit high input",
+    checks: ["Inspect the connector for loose or corroded terminals.", "Check for open circuits and signal shorts.", "Compare scan-tool temperature readings with ambient.", "Test sensor resistance and reference voltage.", "Repair confirmed wiring or sensor faults."]
+  },
+  P0120: {
+    issue: "Throttle/pedal position sensor A circuit malfunction",
+    checks: ["Read related throttle and pedal codes.", "Inspect throttle-body and pedal connectors.", "Check wiring, power and ground circuits.", "Monitor sensor signals for smooth changes.", "Follow vehicle-specific electronic throttle test procedures."]
+  },
+  P0121: {
+    issue: "Throttle/pedal position sensor A range/performance",
+    checks: ["Check for related electronic throttle codes.", "Inspect throttle body for deposits or binding.", "Monitor throttle and pedal position data.", "Check sensor signal correlation using service data.", "Perform any required relearn using approved procedures."]
+  },
+  P0122: {
+    issue: "Throttle/pedal position sensor A circuit low input",
+    checks: ["Inspect the sensor connector and harness.", "Check reference voltage and sensor ground.", "Test signal wiring for shorts to ground.", "Monitor live position readings.", "Repair confirmed wiring or sensor faults."]
+  },
+  P0123: {
+    issue: "Throttle/pedal position sensor A circuit high input",
+    checks: ["Inspect connectors for loose or damaged terminals.", "Check for signal shorts to voltage.", "Verify reference voltage and ground.", "Monitor sensor readings across the operating range.", "Use vehicle-specific diagnostics before replacing parts."]
+  },
+  P0130: {
+    issue: "Oxygen sensor circuit malfunction (Bank 1 Sensor 1)",
+    checks: ["Check for exhaust leaks before the sensor.", "Inspect the oxygen sensor connector and wiring.", "Check sensor signal and heater-related codes.", "Monitor oxygen sensor response with a scan tool.", "Verify fuel mixture issues before replacing the sensor."]
+  },
+  P0131: {
+    issue: "Oxygen sensor circuit low voltage (Bank 1 Sensor 1)",
+    checks: ["Inspect for exhaust leaks upstream.", "Check sensor connector and signal wiring.", "Review fuel trims and lean-condition codes.", "Monitor sensor voltage or current as applicable.", "Test the circuit using manufacturer specifications."]
+  },
+  P0132: {
+    issue: "Oxygen sensor circuit high voltage (Bank 1 Sensor 1)",
+    checks: ["Inspect oxygen sensor wiring for shorts.", "Check for rich fuel-mixture conditions.", "Review fuel trims and injector operation.", "Monitor sensor readings with a scan tool.", "Confirm circuit and mixture faults before replacement."]
+  },
+  P0133: {
+    issue: "Oxygen sensor circuit slow response (Bank 1 Sensor 1)",
+    checks: ["Check for intake and exhaust leaks.", "Inspect the sensor and connector.", "Review fuel trims and engine operating temperature.", "Check sensor response using approved scan-tool tests.", "Verify fuel-system performance before replacing the sensor."]
+  },
+  P0134: {
+    issue: "Oxygen sensor circuit no activity detected (Bank 1 Sensor 1)",
+    checks: ["Inspect the sensor connector and harness.", "Check related heater circuit faults.", "Verify sensor supply, ground and signal circuits.", "Monitor sensor activity after warm-up.", "Test the sensor according to manufacturer procedures."]
+  },
+  P0135: {
+    issue: "Oxygen sensor heater circuit malfunction (Bank 1 Sensor 1)",
+    checks: ["Inspect the oxygen sensor heater connector.", "Check the heater fuse and supply circuit.", "Inspect heater wiring for opens or shorts.", "Test heater resistance against specifications.", "Verify heater control operation before replacing parts."]
+  },
+  P0140: {
+    issue: "Oxygen sensor circuit no activity detected (Bank 1 Sensor 2)",
+    checks: ["Inspect the downstream sensor connector.", "Check signal wiring and related heater codes.", "Warm the engine and monitor sensor readings.", "Check for exhaust leaks or circuit damage.", "Test sensor operation using vehicle-specific procedures."]
+  },
+  P0141: {
+    issue: "Oxygen sensor heater circuit malfunction (Bank 1 Sensor 2)",
+    checks: ["Inspect downstream oxygen sensor wiring.", "Check heater supply and fuse.", "Test heater resistance to specifications.", "Verify heater control and ground circuits.", "Repair confirmed circuit or sensor faults."]
+  },
+  P0171: {
+    issue: "System too lean (Bank 1)",
+    checks: ["Read freeze-frame data and related codes.", "Inspect intake hoses and vacuum lines for leaks.", "Check MAF readings and fuel trims.", "Verify fuel pressure and delivery using approved procedures.", "Check exhaust leaks and injector operation before replacing parts."]
+  }
+});
+
+renderCodes();
+  
