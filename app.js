@@ -58,6 +58,28 @@ codes.push(
   ['P0700','Transmission control system malfunction','Read transmission control module codes.'],
   ['P0715','Input/turbine speed sensor A circuit malfunction','Check transmission speed sensor, wiring and connectors.']
 );
+codes.push(
+  ['P0010','Camshaft position actuator A circuit (Bank 1)','Check VVT solenoid, wiring and oil condition.'],
+  ['P0011','Camshaft timing over-advanced (Bank 1)','Check engine oil, VVT solenoid and timing system.'],
+  ['P0012','Camshaft timing over-retarded (Bank 1)','Check oil pressure, VVT system and timing components.'],
+  ['P0013','Camshaft position actuator B circuit (Bank 1)','Check exhaust VVT solenoid and wiring.'],
+  ['P0014','Camshaft timing over-advanced (Bank 1, exhaust)','Check oil condition, VVT actuator and timing.'],
+  ['P0016','Crankshaft/camshaft position correlation (Bank 1 Sensor A)','Check timing components, sensors and wiring.'],
+  ['P0017','Crankshaft/camshaft position correlation (Bank 1 Sensor B)','Check timing components, sensors and wiring.'],
+  ['P0020','Camshaft position actuator A circuit (Bank 2)','Check VVT solenoid, wiring and oil condition.'],
+  ['P0021','Camshaft timing over-advanced (Bank 2)','Check oil condition, VVT system and timing.'],
+  ['P0022','Camshaft timing over-retarded (Bank 2)','Check oil pressure, VVT solenoid and timing.'],
+  ['P0068','MAP/MAF and throttle position correlation','Check intake leaks, throttle body and airflow sensors.'],
+  ['P0087','Fuel rail/system pressure too low','Check fuel supply, pressure sensor and pump operation.'],
+  ['P0088','Fuel rail/system pressure too high','Check fuel pressure control and sensor readings.'],
+  ['P0090','Fuel pressure regulator 1 control circuit','Check regulator control circuit and wiring.'],
+  ['P0104','Mass or volume airflow circuit intermittent','Check MAF connector, wiring and intake system.'],
+  ['P0115','Engine coolant temperature sensor circuit','Check coolant temperature sensor and wiring.'],
+  ['P0116','Engine coolant temperature sensor range/performance','Check coolant temperature readings and thermostat.'],
+  ['P0117','Engine coolant temperature sensor circuit low','Check sensor circuit for shorts and connector damage.'],
+  ['P0118','Engine coolant temperature sensor circuit high','Check sensor circuit for open connections and wiring.'],
+  ['P0128','Coolant thermostat temperature below regulating temperature','Check thermostat, coolant level and temperature sensor.']
+);
 let session=null;
 function go(page) {document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===page));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('selected',x.dataset.go===page));window.scrollTo(0,0);render()}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
