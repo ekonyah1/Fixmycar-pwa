@@ -122,6 +122,20 @@ PRO_DIAGNOSTICS.P0335 = {
     "Inspect the crankshaft reluctor wheel if the sensor and wiring test correctly."
   ]
 };
+
+PRO_DIAGNOSTICS.P0340 = {
+  issue: "Camshaft position sensor circuit malfunction",
+  checks: [
+    "Read all stored and pending trouble codes.",
+    "Inspect the camshaft position sensor connector for damage or corrosion.",
+    "Inspect sensor wiring for loose connections, cuts or heat damage.",
+    "Check sensor power, ground and signal using the vehicle-specific wiring diagram.",
+    "Check camshaft and crankshaft synchronization with a compatible scan tool.",
+    "Test the sensor and circuit according to manufacturer specifications.",
+    "Inspect engine timing components if sensor and wiring tests pass."
+  ]
+};
+
 const PRO_P0302 = {
   issue: "Cylinder 2 misfire",
   checks: [
