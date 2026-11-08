@@ -110,7 +110,18 @@ const PRO_DIAGNOSTICS = {
     ]
   }
 };
-
+PRO_DIAGNOSTICS.P0335 = {
+  issue: "Crankshaft position sensor A circuit malfunction",
+  checks: [
+    "Read all stored and pending trouble codes.",
+    "Inspect the crankshaft position sensor connector for damage, corrosion or loose pins.",
+    "Inspect sensor wiring for cuts, rubbing or heat damage.",
+    "Check sensor power, ground and signal using the vehicle-specific wiring diagram.",
+    "Check the engine RPM reading while cranking with a compatible scan tool.",
+    "Test the sensor and related circuit according to manufacturer specifications.",
+    "Inspect the crankshaft reluctor wheel if the sensor and wiring test correctly."
+  ]
+};
 const PRO_P0302 = {
   issue: "Cylinder 2 misfire",
   checks: [
